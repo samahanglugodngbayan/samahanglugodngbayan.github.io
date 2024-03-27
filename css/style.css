@@ -550,8 +550,8 @@
 
 .about .about-img .about-experience {
     position: absolute;
-    top: 125px; 
-    left: -125px; 
+    top: 92px; 
+    left: -85px; 
     transform: rotate(-90deg);
     background: transparent;
     color: var(--bs-primary);
