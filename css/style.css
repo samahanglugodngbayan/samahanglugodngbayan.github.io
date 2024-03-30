@@ -483,6 +483,7 @@
 .service .service-item:hover .service-img::before {
     height: 100%;
     background: rgba(21, 185, 217, .3);
+    /* background: rgb(255,178,56, .3); */
 }
 
 .service .service-item .service-img:hover img {
@@ -504,13 +505,15 @@
     left: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: rgba(21, 185, 217, .5);
+    /* background: rgba(21, 185, 217, .5); */
+    background: rgb(255,178,56, .5);
     transition: 0.5s;
     z-index: 3;
 }
 
 .service .service-item:hover .service-content::before {
-    background: rgba(21, 185, 217, .5);
+    /* background: rgba(21, 185, 217, .5); */
+    background: rgb(255,178,56, .5);
     height: 100%;
 }
 
@@ -525,7 +528,8 @@
     z-index: 9;
 }
 .service .service-item:hover .service-content .service-content-inner h5 {
-    color: var(--bs-secondary);
+    /* color: var(--bs-secondary); */
+    color: #820814;
 }
 
 /*** Service End ***/
@@ -548,10 +552,15 @@
 
 }
 
+small.disclaimer{
+    font-size: .75em;
+    background-color: #dddddd;
+}
+
 .about .about-img .about-experience {
     position: absolute;
-    top: 92px; 
-    left: -85px; 
+    top: 96px; 
+    left: -86px; 
     transform: rotate(-90deg);
     background: transparent;
     color: var(--bs-primary);
