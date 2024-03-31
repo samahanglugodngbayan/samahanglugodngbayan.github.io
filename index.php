@@ -60,7 +60,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="index.php" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><!-- <i class="fas fa-star-of-life me-3"></i> --><img src="img/logohubo.jpg" alt="Logo"> SLBS-HS since 1901</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -68,7 +68,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="index.php" class="nav-item nav-link active">Home</a>
                         <a href="about-SLBS-SH.html" class="nav-item nav-link">About SLBS-HS</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -462,6 +462,38 @@
             </div>
         </div>
         <!-- Copyright End -->
+
+        <!-- php form code -->
+        <?php
+            if(isset($_POST['submit'])){
+                //Get form data
+                $name = $_POST['name']; 
+                $email = $_POST['email'];
+                $message = $_POST['message'];
+                
+                //Email address validation and display error message
+                $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+            
+                if (!preg_match($email_exp, $email)) {
+                    echo '<br><span style="color:red;">The Email address you entered is not valid.</span>';
+                    exit;
+                }
+                
+                $to = "samahanglugodngbayan@gmail.com";  //recipient email address
+                $subject = "Contact Form";  //Subject of the email
+                
+                //Message content to send in an email
+                $message = "Name: ".$name."<br>Email: ".$email."<br> Message".$message;
+                
+                //Email headers
+                $headers = "From: yourname@yourdomain.com"."\r\n";
+                $headers = "CC: someone@example.com";
+                $headers .= "Reply-To:".$email."\r\n";
+                
+                //Send email 
+                mail($to, $subject, $message, $headers);
+            }
+            ?>
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
