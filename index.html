@@ -378,11 +378,17 @@ Karaniwan ding sa pasyon halaw ang diyalogo ng senakulo na nasa anyong quintilla
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="video h-100">
-                                        <img src="img/video-img.jpg" class="img-fluid rounded w-100 h-100" style="object-fit: cover;" alt="">
-                                        <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/watch?v=sDnjoW-ahuo" data-bs-target="#videoModal">
-                                            <span></span>
-                                        </button>
+                                    <div class="video-container">
+                                      <iframe 
+                                        width="560" 
+                                        height="315" 
+                                        src="https://youtube.com" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                        allowfullscreen>
+                                      </iframe>
                                     </div>
                                 </div>
                             </div>
@@ -398,24 +404,6 @@ Karaniwan ding sa pasyon halaw ang diyalogo ng senakulo na nasa anyong quintilla
             
         </div>
 
-
-        <!-- Modal Video -->
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- 16:9 aspect ratio -->
-                        <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="https://www.youtu.be/sDnjoW-ahuo?si=z_7olSKUaEbaD"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Makipag-ugnayan End -->
 
     <!-- Feature End -->
